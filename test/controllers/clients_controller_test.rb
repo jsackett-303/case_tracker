@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class ClientsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @client = clients(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do
@@ -17,7 +20,9 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create client" do
     assert_difference('Client.count') do
-      post clients_url, params: { client: { address: @client.address, case_id: @client.case_id, city: @client.city, first_name: @client.first_name, last_name: @client.last_name, middle_name: @client.middle_name, notes: @client.notes, postal_code: @client.postal_code, state: @client.state } }
+      post clients_url, params: { client: { address: @client.address, case_id: @client.case_id, city: @client.city,
+                                            first_name: @client.first_name, last_name: @client.last_name,
+                                            middle_name: @client.middle_name, notes: @client.notes, postal_code: @client.postal_code, state: @client.state } }
     end
 
     assert_redirected_to client_url(Client.last)
@@ -34,7 +39,9 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update client" do
-    patch client_url(@client), params: { client: { address: @client.address, case_id: @client.case_id, city: @client.city, first_name: @client.first_name, last_name: @client.last_name, middle_name: @client.middle_name, notes: @client.notes, postal_code: @client.postal_code, state: @client.state } }
+    patch client_url(@client), params: { client: { address: @client.address, case_id: @client.case_id, city: @client.city,
+                                                   first_name: @client.first_name, last_name: @client.last_name,
+                                                   middle_name: @client.middle_name, notes: @client.notes, postal_code: @client.postal_code, state: @client.state } }
     assert_redirected_to client_url(@client)
   end
 
