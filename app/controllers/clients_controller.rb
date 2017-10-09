@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_paper_trail_whodunnit
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   # GET /clients
