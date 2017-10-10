@@ -6,10 +6,11 @@
     <th>Edited Value</th>
     <th>Date</th>
   </tr>
-<% versions.each do |version| %>
-  <% version.changeset.reject { |k,v| ['created_at', 'updated_at'].include?(k) }.each do |key,value| %>
+<% versions.reverse.each do |version| %>
+  <% user = User.find_by(id: version.whodunnit) %>
+  <% version.changeset.reject { |k,v| ['id', 'created_at', 'updated_at'].include?(k) }.each do |key,value| %>
     <tr>
-      <td><%= User.find_by(id: version.whodunnit).email %></td>
+      <td><%= user.email %></td>
       <td><%= key %></td>
       <td><%= value[0] %></td>
       <td><%= value[-1] %></td>
