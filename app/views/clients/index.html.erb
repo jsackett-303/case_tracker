@@ -41,3 +41,12 @@
 <br>
 
 <%= link_to 'New Client', new_client_path %>
+
+<h4>Import Clients</h4>
+<%= form_tag import_clients_path, method: :post, multipart: true do %>
+  <p>
+    Select a file to import
+    <%= file_field_tag :file %><br/>
+    <span><%= submit_tag "Import" %></span>
+  </p>
+<% end %>

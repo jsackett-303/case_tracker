@@ -63,6 +63,18 @@ class ClientsController < ApplicationController
     end
   end
 
+  def import
+    respond_to do |format|
+      if Client.import_csv(params[:file])
+        format.html { redirect_to clients_url, notice: 'Clients were successfully imported.' }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to clients_url, notice: 'Clients were not successfully imported. See the logs' }
+        format.json { render notice: 'Trouble importing clients. See logs', status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
