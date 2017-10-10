@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Editor</th>
+    <th>Field Changed</th>
+    <th>Previous Value</th>
+    <th>Edited Value</th>
+    <th>Date</th>
+  </tr>
+<% versions.each do |version| %>
+  <% version.changeset.reject { |k,v| ['created_at', 'updated_at'].include?(k) }.each do |key,value| %>
+    <tr>
+      <td><%= User.find_by(id: version.whodunnit).email %></td>
+      <td><%= key %></td>
+      <td><%= value[0] %></td>
+      <td><%= value[-1] %></td>
+      <td><%= version.changeset['updated_at'][-1] %></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>

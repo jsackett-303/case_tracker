@@ -4,3 +4,8 @@
 
 <%= link_to 'Show', @client %> |
 <%= link_to 'Back', clients_path %>
+
+<p>
+<h4>Client History</h4>
+<%= render 'history', versions: @client.versions %>
+</p>
