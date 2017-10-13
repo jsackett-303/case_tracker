@@ -3,6 +3,15 @@ class ClientsController < ApplicationController
   before_action :set_paper_trail_whodunnit
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
+  def search
+    @clients = if params[:query].present?
+                 Client.search(params[:query])
+               else
+                 Client.none
+               end
+    render :index
+  end
+
   # GET /clients
   # GET /clients.json
   def index

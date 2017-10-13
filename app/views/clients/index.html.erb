@@ -1,19 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+<h4>Search Clients</h4>
+<%= form_tag search_clients_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query %>
+    <span><%= submit_tag "Search" %></span>
+  </p>
+<% end %>
+
 <h1>Clients</h1>
 
-<table>
+<table id="indextable">
   <thead>
     <tr>
-      <th>Case</th>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Middle name</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Postal code</th>
-      <th>Notes</th>
+      <th><a href="javascript:SortTable(0,'N');">Case</a></th>
+      <th><a href="javascript:SortTable(1,'T');">Last name</a></th>
+      <th><a href="javascript:SortTable(2,'T');">First name</a></th>
+      <th><a href="javascript:SortTable(3,'T');">Middle name</a></th>
+      <th><a href="javascript:SortTable(4,'T');">Address</a></th>
+      <th><a href="javascript:SortTable(5,'T');">City</a></th>
+      <th><a href="javascript:SortTable(6,'T');">State</a></th>
+      <th><a href="javascript:SortTable(7,'N');">Postal code</a></th>
+      <th><a href="javascript:SortTable(8,'T');">Notes</a></th>
       <th colspan="3"></th>
     </tr>
   </thead>
