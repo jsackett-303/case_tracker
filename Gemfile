@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'paper_trail'
 gem 'search_cop'
+gem 'jquery-rails'

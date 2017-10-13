@@ -3,8 +3,8 @@
 <h4>Search Clients</h4>
 <%= form_tag search_clients_path, method: :get do %>
   <p>
-    <%= text_field_tag :query %>
-    <span><%= submit_tag "Search" %></span>
+    <%= text_field_tag :query, params[:query] %>
+    <span><%= submit_tag "Search", id: 'search' %></span>
   </p>
 <% end %>
 
