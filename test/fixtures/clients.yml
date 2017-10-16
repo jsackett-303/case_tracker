@@ -1,23 +1,121 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  case_id: MyString
   last_name: MyString
   first_name: MyString
-  middle_name: MyString
-  address: MyString
+  prefix: MyString
+  street: MyString
+  apartment: MyString
   city: MyString
   state: MyString
-  postal_code: MyString
-  notes: MyText
+  zip_code: MyString
+  phone1: MyString
+  phone2: MyString
+  email: MyString
+  date_of_birth: 2017-10-13
+  local_type: T2
+  dlw: 2017-10-13
+  dli: 2017-10-13
+  first_contact: 2017-10-13
+  packet_sent: 2017-10-13
+  sign_up_date: 2017-10-13
+  initial_to_local: 2017-10-13
+  verfication_of_local: 2017-10-13
+  sixteen_ninety_six_to_oadr: 2017-10-13
+  verification_of_oadr: 2017-10-13
+  local: MyString
+  oadr: MyString
+  initial_appearance: 2017-10-13
+  initial_denial: 2017-10-13
+  recon_filed: 2017-10-13
+  recon_denial: 2017-10-13
+  fr_requested: 2017-10-13
+  fr_sub: 2017-10-13
+  rfh_filed: 2017-10-13
+  rfh_acked: 2017-10-13
+  proposed_exhibits: 2017-10-13
+  ready_to_schedule: 2017-10-13
+  date_scheduled: 2017-10-13
+  claimant_hearing_prep: 2017-10-13
+  notice_of_hearing: 2017-10-13
+  hearing_date: 2017-10-13
+  supplemental_date: 2017-10-13
+  expedited: 2017-10-13
+  decision: MyString
+  decision_date: 2017-10-13
+  alj: MyString
+  ve: MyString
+  me: MyString
+  ac: 2017-10-13
+  awarded_at: MyString
+  appeal: false
+  appeal_filed: false
+  close_out_letter: 2017-10-13
+  costs: 9.99
+  cost_two: 9.99
+  cost_three: 9.99
+  date_costs_received: 2017-10-13
+  date_ssdi_received: 2017-10-13
+  date_ssi_received: 2017-10-13
+  case_id: MyString
+  open: MyString
 
 two:
-  case_id: MyString
   last_name: MyString
   first_name: MyString
-  middle_name: MyString
-  address: MyString
+  prefix: MyString
+  street: MyString
+  apartment: MyString
   city: MyString
   state: MyString
-  postal_code: MyString
-  notes: MyText
+  zip_code: MyString
+  phone1: MyString
+  phone2: MyString
+  email: MyString
+  date_of_birth: 2017-10-13
+  local_type: T2
+  dlw: 2017-10-13
+  dli: 2017-10-13
+  first_contact: 2017-10-13
+  packet_sent: 2017-10-13
+  sign_up_date: 2017-10-13
+  initial_to_local: 2017-10-13
+  verfication_of_local: 2017-10-13
+  sixteen_ninety_six_to_oadr: 2017-10-13
+  verification_of_oadr: 2017-10-13
+  local: MyString
+  oadr: MyString
+  initial_appearance: 2017-10-13
+  initial_denial: 2017-10-13
+  recon_filed: 2017-10-13
+  recon_denial: 2017-10-13
+  fr_requested: 2017-10-13
+  fr_sub: 2017-10-13
+  rfh_filed: 2017-10-13
+  rfh_acked: 2017-10-13
+  proposed_exhibits: 2017-10-13
+  ready_to_schedule: 2017-10-13
+  date_scheduled: 2017-10-13
+  claimant_hearing_prep: 2017-10-13
+  notice_of_hearing: 2017-10-13
+  hearing_date: 2017-10-13
+  supplemental_date: 2017-10-13
+  expedited: 2017-10-13
+  decision: MyString
+  decision_date: 2017-10-13
+  alj: MyString
+  ve: MyString
+  me: MyString
+  ac: 2017-10-13
+  awarded_at: MyString
+  appeal: false
+  appeal_filed: false
+  close_out_letter: 2017-10-13
+  costs: 9.99
+  cost_two: 9.99
+  cost_three: 9.99
+  date_costs_received: 2017-10-13
+  date_ssdi_received: 2017-10-13
+  date_ssi_received: 2017-10-13
+  case_id: MyString
+  open: MyString

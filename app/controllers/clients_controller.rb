@@ -93,6 +93,16 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:case_id, :last_name, :first_name, :middle_name, :address, :city, :state, :postal_code, :notes)
+      params.require(:client).permit(:last_name, :first_name, :prefix, :street, :apartment, :city, :state, :zip_code,
+                                     :phone1, :phone2, :email, :date_of_birth, :local_type, :dlw, :dli, :first_contact,
+                                     :packet_sent, :sign_up_date, :initial_to_local, :verfication_of_local,
+                                     :sixteen_ninety_six_to_oadr, :verification_of_oadr, :local, :oadr,
+                                     :initial_appearance, :initial_denial, :recon_filed, :recon_denial,
+                                     :fr_requested, :fr_sub, :rfh_filed, :rfh_acked, :proposed_exhibits,
+                                     :ready_to_schedule, :date_scheduled, :claimant_hearing_prep, :notice_of_hearing,
+                                     :hearing_date, :supplemental_date, :expedited, :decision, :decision_date, :alj,
+                                     :ve, :me, :ac, :awarded_at, :appeal, :appeal_filed, :close_out_letter, :costs,
+                                     :cost_two, :cost_three, :date_costs_received, :date_ssdi_received,
+                                     :date_ssi_received, :case_id, :open)
     end
 end

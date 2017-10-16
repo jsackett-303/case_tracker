@@ -5,7 +5,7 @@ class Client < ApplicationRecord
   has_paper_trail
 
   search_scope :search do
-    attributes :case_id, :last_name, :first_name, :address, :city, :state, :notes
+    attributes :last_name, :first_name, :email, :street, :city
   end
 
   def self.import_csv(file)

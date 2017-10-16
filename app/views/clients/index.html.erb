@@ -10,18 +10,67 @@
 
 <h1>Clients</h1>
 
-<table id="indextable">
+<table id='indextable' border='1'>
   <thead>
     <tr>
-      <th><a href="javascript:SortTable(0,'N');">Case</a></th>
-      <th><a href="javascript:SortTable(1,'T');">Last name</a></th>
-      <th><a href="javascript:SortTable(2,'T');">First name</a></th>
-      <th><a href="javascript:SortTable(3,'T');">Middle name</a></th>
-      <th><a href="javascript:SortTable(4,'T');">Address</a></th>
+      <th><a href="javascript:SortTable(0,'T');">Last name</a></th>
+      <th><a href="javascript:SortTable(1,'T');">First name</a></th>
+      <th>Prefix</th>
+      <th><a href="javascript:SortTable(3,'T');">Street</a></th>
+      <th>Apartment</th>
       <th><a href="javascript:SortTable(5,'T');">City</a></th>
-      <th><a href="javascript:SortTable(6,'T');">State</a></th>
-      <th><a href="javascript:SortTable(7,'N');">Postal code</a></th>
-      <th><a href="javascript:SortTable(8,'T');">Notes</a></th>
+      <th>State</th>
+      <th><a href="javascript:SortTable(7,'N');">Zip code</a></th>
+      <th>Phone1</th>
+      <th>Phone2</th>
+      <th><a href="javascript:SortTable(10,'T');">Email</a></th>
+      <th>Date of birth</th>
+      <th>Type</th>
+      <th>Dlw</th>
+      <th>Dli</th>
+      <th>First contact</th>
+      <th>Packet sent</th>
+      <th>Sign up date</th>
+      <th>Initial to local</th>
+      <th>Verfication of local</th>
+      <th>Sixteen ninety six to oadr</th>
+      <th>Verification of oadr</th>
+      <th>Local</th>
+      <th>Oadr</th>
+      <th>Initial appearance</th>
+      <th>Initial denial</th>
+      <th>Recon filed</th>
+      <th>Recon denial</th>
+      <th>Fr requested</th>
+      <th>Fr sub</th>
+      <th>Rfh filed</th>
+      <th>Rfh acked</th>
+      <th>Proposed exhibits</th>
+      <th>Ready to schedule</th>
+      <th>Date scheduled</th>
+      <th>Claimant hearing prep</th>
+      <th>Notice of hearing</th>
+      <th>Hearing date</th>
+      <th>Supplemental date</th>
+      <th>Expedited</th>
+      <th>Decision</th>
+      <th>Decision date</th>
+      <th>Alj</th>
+      <th>Ve</th>
+      <th>Me</th>
+      <th>Ac</th>
+      <th>Awarded at</th>
+      <th>Appeal</th>
+      <th>Appeal filed</th>
+      <th>Close out letter</th>
+      <th>Costs</th>
+      <th>Cost two</th>
+      <th>Cost three</th>
+      <th>Date costs received</th>
+      <th>Date ssdi received</th>
+      <th>Date ssi received</th>
+      <th>Case</th>
+      <th>Open</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,15 +78,64 @@
   <tbody>
     <% @clients.each do |client| %>
       <tr>
-        <td><%= client.case_id %></td>
         <td><%= client.last_name %></td>
         <td><%= client.first_name %></td>
-        <td><%= client.middle_name %></td>
-        <td><%= client.address %></td>
+        <td><%= client.prefix %></td>
+        <td><%= client.street %></td>
+        <td><%= client.apartment %></td>
         <td><%= client.city %></td>
         <td><%= client.state %></td>
-        <td><%= client.postal_code %></td>
-        <td><%= client.notes %></td>
+        <td><%= client.zip_code %></td>
+        <td><%= client.phone1 %></td>
+        <td><%= client.phone2 %></td>
+        <td><%= client.email %></td>
+        <td><%= client.date_of_birth %></td>
+        <td><%= client.local_type %></td>
+        <td><%= client.dlw %></td>
+        <td><%= client.dli %></td>
+        <td><%= client.first_contact %></td>
+        <td><%= client.packet_sent %></td>
+        <td><%= client.sign_up_date %></td>
+        <td><%= client.initial_to_local %></td>
+        <td><%= client.verfication_of_local %></td>
+        <td><%= client.sixteen_ninety_six_to_oadr %></td>
+        <td><%= client.verification_of_oadr %></td>
+        <td><%= client.local %></td>
+        <td><%= client.oadr %></td>
+        <td><%= client.initial_appearance %></td>
+        <td><%= client.initial_denial %></td>
+        <td><%= client.recon_filed %></td>
+        <td><%= client.recon_denial %></td>
+        <td><%= client.fr_requested %></td>
+        <td><%= client.fr_sub %></td>
+        <td><%= client.rfh_filed %></td>
+        <td><%= client.rfh_acked %></td>
+        <td><%= client.proposed_exhibits %></td>
+        <td><%= client.ready_to_schedule %></td>
+        <td><%= client.date_scheduled %></td>
+        <td><%= client.claimant_hearing_prep %></td>
+        <td><%= client.notice_of_hearing %></td>
+        <td><%= client.hearing_date %></td>
+        <td><%= client.supplemental_date %></td>
+        <td><%= client.expedited %></td>
+        <td><%= client.decision %></td>
+        <td><%= client.decision_date %></td>
+        <td><%= client.alj %></td>
+        <td><%= client.ve %></td>
+        <td><%= client.me %></td>
+        <td><%= client.ac %></td>
+        <td><%= client.awarded_at %></td>
+        <td><%= client.appeal %></td>
+        <td><%= client.appeal_filed %></td>
+        <td><%= client.close_out_letter %></td>
+        <td><%= client.costs %></td>
+        <td><%= client.cost_two %></td>
+        <td><%= client.cost_three %></td>
+        <td><%= client.date_costs_received %></td>
+        <td><%= client.date_ssdi_received %></td>
+        <td><%= client.date_ssi_received %></td>
+        <td><%= client.case_id %></td>
+        <td><%= client.open %></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>

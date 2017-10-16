@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Case:</strong>
-  <%= @client.case_id %>
-</p>
-
-<p>
   <strong>Last name:</strong>
   <%= @client.last_name %>
 </p>
@@ -16,13 +11,18 @@
 </p>
 
 <p>
-  <strong>Middle name:</strong>
-  <%= @client.middle_name %>
+  <strong>Prefix:</strong>
+  <%= @client.prefix %>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @client.address %>
+  <strong>Street:</strong>
+  <%= @client.street %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @client.apartment %>
 </p>
 
 <p>
@@ -36,19 +36,264 @@
 </p>
 
 <p>
-  <strong>Postal code:</strong>
-  <%= @client.postal_code %>
+  <strong>Zip code:</strong>
+  <%= @client.zip_code %>
 </p>
 
 <p>
-  <strong>Notes:</strong>
-  <%= @client.notes %>
+  <strong>Phone1:</strong>
+  <%= @client.phone1 %>
+</p>
+
+<p>
+  <strong>Phone2:</strong>
+  <%= @client.phone2 %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @client.date_of_birth %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @client.local_type %>
+</p>
+
+<p>
+  <strong>Dlw:</strong>
+  <%= @client.dlw %>
+</p>
+
+<p>
+  <strong>Dli:</strong>
+  <%= @client.dli %>
+</p>
+
+<p>
+  <strong>First contact:</strong>
+  <%= @client.first_contact %>
+</p>
+
+<p>
+  <strong>Packet sent:</strong>
+  <%= @client.packet_sent %>
+</p>
+
+<p>
+  <strong>Sign up date:</strong>
+  <%= @client.sign_up_date %>
+</p>
+
+<p>
+  <strong>Initial to local:</strong>
+  <%= @client.initial_to_local %>
+</p>
+
+<p>
+  <strong>Verfication of local:</strong>
+  <%= @client.verfication_of_local %>
+</p>
+
+<p>
+  <strong>Sixteen ninety six to oadr:</strong>
+  <%= @client.sixteen_ninety_six_to_oadr %>
+</p>
+
+<p>
+  <strong>Verification of oadr:</strong>
+  <%= @client.verification_of_oadr %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @client.local %>
+</p>
+
+<p>
+  <strong>Oadr:</strong>
+  <%= @client.oadr %>
+</p>
+
+<p>
+  <strong>Initial appearance:</strong>
+  <%= @client.initial_appearance %>
+</p>
+
+<p>
+  <strong>Initial denial:</strong>
+  <%= @client.initial_denial %>
+</p>
+
+<p>
+  <strong>Recon filed:</strong>
+  <%= @client.recon_filed %>
+</p>
+
+<p>
+  <strong>Recon denial:</strong>
+  <%= @client.recon_denial %>
+</p>
+
+<p>
+  <strong>Fr requested:</strong>
+  <%= @client.fr_requested %>
+</p>
+
+<p>
+  <strong>Fr sub:</strong>
+  <%= @client.fr_sub %>
+</p>
+
+<p>
+  <strong>Rfh filed:</strong>
+  <%= @client.rfh_filed %>
+</p>
+
+<p>
+  <strong>Rfh acked:</strong>
+  <%= @client.rfh_acked %>
+</p>
+
+<p>
+  <strong>Proposed exhibits:</strong>
+  <%= @client.proposed_exhibits %>
+</p>
+
+<p>
+  <strong>Ready to schedule:</strong>
+  <%= @client.ready_to_schedule %>
+</p>
+
+<p>
+  <strong>Date scheduled:</strong>
+  <%= @client.date_scheduled %>
+</p>
+
+<p>
+  <strong>Claimant hearing prep:</strong>
+  <%= @client.claimant_hearing_prep %>
+</p>
+
+<p>
+  <strong>Notice of hearing:</strong>
+  <%= @client.notice_of_hearing %>
+</p>
+
+<p>
+  <strong>Hearing date:</strong>
+  <%= @client.hearing_date %>
+</p>
+
+<p>
+  <strong>Supplemental date:</strong>
+  <%= @client.supplemental_date %>
+</p>
+
+<p>
+  <strong>Expedited:</strong>
+  <%= @client.expedited %>
+</p>
+
+<p>
+  <strong>Decision:</strong>
+  <%= @client.decision %>
+</p>
+
+<p>
+  <strong>Decision date:</strong>
+  <%= @client.decision_date %>
+</p>
+
+<p>
+  <strong>Alj:</strong>
+  <%= @client.alj %>
+</p>
+
+<p>
+  <strong>Ve:</strong>
+  <%= @client.ve %>
+</p>
+
+<p>
+  <strong>Me:</strong>
+  <%= @client.me %>
+</p>
+
+<p>
+  <strong>Ac:</strong>
+  <%= @client.ac %>
+</p>
+
+<p>
+  <strong>Awarded at:</strong>
+  <%= @client.awarded_at %>
+</p>
+
+<p>
+  <strong>Appeal:</strong>
+  <%= @client.appeal %>
+</p>
+
+<p>
+  <strong>Appeal filed:</strong>
+  <%= @client.appeal_filed %>
+</p>
+
+<p>
+  <strong>Close out letter:</strong>
+  <%= @client.close_out_letter %>
+</p>
+
+<p>
+  <strong>Costs:</strong>
+  <%= @client.costs %>
+</p>
+
+<p>
+  <strong>Cost two:</strong>
+  <%= @client.cost_two %>
+</p>
+
+<p>
+  <strong>Cost three:</strong>
+  <%= @client.cost_three %>
+</p>
+
+<p>
+  <strong>Date costs received:</strong>
+  <%= @client.date_costs_received %>
+</p>
+
+<p>
+  <strong>Date ssdi received:</strong>
+  <%= @client.date_ssdi_received %>
+</p>
+
+<p>
+  <strong>Date ssi received:</strong>
+  <%= @client.date_ssi_received %>
+</p>
+
+<p>
+  <strong>Case:</strong>
+  <%= @client.case_id %>
+</p>
+
+<p>
+  <strong>Open:</strong>
+  <%= @client.open %>
 </p>
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
 
 <p>
-<h4>Client History</h4>
-<%= render 'history', versions: @client.versions %>
+  <h4>Client History</h4>
+  <%= render 'history', versions: @client.versions %>
 </p>

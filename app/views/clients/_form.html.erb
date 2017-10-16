@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :case_id %>
-    <%= form.text_field :case_id, id: :client_case_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :last_name %>
     <%= form.text_field :last_name, id: :client_last_name %>
   </div>
@@ -27,13 +22,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :middle_name %>
-    <%= form.text_field :middle_name, id: :client_middle_name %>
+    <%= form.label :prefix %>
+    <%= form.text_field :prefix, id: :client_prefix %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :client_address %>
+    <%= form.label :street %>
+    <%= form.text_field :street, id: :client_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apartment %>
+    <%= form.text_field :apartment, id: :client_apartment %>
   </div>
 
   <div class="field">
@@ -47,13 +47,258 @@
   </div>
 
   <div class="field">
-    <%= form.label :postal_code %>
-    <%= form.text_field :postal_code, id: :client_postal_code %>
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code, id: :client_zip_code %>
   </div>
 
   <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_area :notes, id: :client_notes %>
+    <%= form.label :phone1 %>
+    <%= form.text_field :phone1, id: :client_phone1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone2 %>
+    <%= form.text_field :phone2, id: :client_phone2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :client_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth, id: :client_date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local_type %>
+    <%= form.text_field :local_type, id: :client_local_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dlw %>
+    <%= form.date_select :dlw, id: :client_dlw %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dli %>
+    <%= form.date_select :dli, id: :client_dli %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_contact %>
+    <%= form.date_select :first_contact, id: :client_first_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :packet_sent %>
+    <%= form.date_select :packet_sent, id: :client_packet_sent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sign_up_date %>
+    <%= form.date_select :sign_up_date, id: :client_sign_up_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_to_local %>
+    <%= form.date_select :initial_to_local, id: :client_initial_to_local %>
+  </div>
+
+  <div class="field">
+    <%= form.label :verfication_of_local %>
+    <%= form.date_select :verfication_of_local, id: :client_verfication_of_local %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sixteen_ninety_six_to_oadr %>
+    <%= form.date_select :sixteen_ninety_six_to_oadr, id: :client_sixteen_ninety_six_to_oadr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :verification_of_oadr %>
+    <%= form.date_select :verification_of_oadr, id: :client_verification_of_oadr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local %>
+    <%= form.text_field :local, id: :client_local %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oadr %>
+    <%= form.text_field :oadr, id: :client_oadr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_appearance %>
+    <%= form.date_select :initial_appearance, id: :client_initial_appearance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_denial %>
+    <%= form.date_select :initial_denial, id: :client_initial_denial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recon_filed %>
+    <%= form.date_select :recon_filed, id: :client_recon_filed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recon_denial %>
+    <%= form.date_select :recon_denial, id: :client_recon_denial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fr_requested %>
+    <%= form.date_select :fr_requested, id: :client_fr_requested %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fr_sub %>
+    <%= form.date_select :fr_sub, id: :client_fr_sub %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rfh_filed %>
+    <%= form.date_select :rfh_filed, id: :client_rfh_filed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rfh_acked %>
+    <%= form.date_select :rfh_acked, id: :client_rfh_acked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proposed_exhibits %>
+    <%= form.date_select :proposed_exhibits, id: :client_proposed_exhibits %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ready_to_schedule %>
+    <%= form.date_select :ready_to_schedule, id: :client_ready_to_schedule %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_scheduled %>
+    <%= form.date_select :date_scheduled, id: :client_date_scheduled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :claimant_hearing_prep %>
+    <%= form.date_select :claimant_hearing_prep, id: :client_claimant_hearing_prep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notice_of_hearing %>
+    <%= form.date_select :notice_of_hearing, id: :client_notice_of_hearing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hearing_date %>
+    <%= form.date_select :hearing_date, id: :client_hearing_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supplemental_date %>
+    <%= form.date_select :supplemental_date, id: :client_supplemental_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expedited %>
+    <%= form.date_select :expedited, id: :client_expedited %>
+  </div>
+
+  <div class="field">
+    <%= form.label :decision %>
+    <%= form.text_field :decision, id: :client_decision %>
+  </div>
+
+  <div class="field">
+    <%= form.label :decision_date %>
+    <%= form.date_select :decision_date, id: :client_decision_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alj %>
+    <%= form.text_field :alj, id: :client_alj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ve %>
+    <%= form.text_field :ve, id: :client_ve %>
+  </div>
+
+  <div class="field">
+    <%= form.label :me %>
+    <%= form.text_field :me, id: :client_me %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ac %>
+    <%= form.date_select :ac, id: :client_ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :awarded_at %>
+    <%= form.text_field :awarded_at, id: :client_awarded_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appeal %>
+    <%= form.check_box :appeal, id: :client_appeal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appeal_filed %>
+    <%= form.check_box :appeal_filed, id: :client_appeal_filed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :close_out_letter %>
+    <%= form.date_select :close_out_letter, id: :client_close_out_letter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :costs %>
+    <%= form.text_field :costs, id: :client_costs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost_two %>
+    <%= form.text_field :cost_two, id: :client_cost_two %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost_three %>
+    <%= form.text_field :cost_three, id: :client_cost_three %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_costs_received %>
+    <%= form.date_select :date_costs_received, id: :client_date_costs_received %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_ssdi_received %>
+    <%= form.date_select :date_ssdi_received, id: :client_date_ssdi_received %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_ssi_received %>
+    <%= form.date_select :date_ssi_received, id: :client_date_ssi_received %>
+  </div>
+
+  <div class="field">
+    <%= form.label :case_id %>
+    <%= form.text_field :case_id, id: :client_case_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open %>
+    <%= form.text_field :open, id: :client_open %>
   </div>
 
   <div class="actions">
