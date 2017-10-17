@@ -8,7 +8,7 @@ class ClientsController < ApplicationController
       if params[:query].present?
         Client.search(params[:query])
       else
-        Client.none
+        Client.all
       end
     render :index
   end

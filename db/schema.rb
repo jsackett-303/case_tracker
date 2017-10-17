@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20171009215204) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "clients", force: :cascade do |t|
     t.string "last_name"
     t.string "first_name"
@@ -97,9 +100,9 @@ ActiveRecord::Schema.define(version: 20171009215204) do
     t.integer "item_id", null: false
     t.string "event", null: false
     t.string "whodunnit"
-    t.text "object", limit: 1073741823
+    t.text "object"
     t.datetime "created_at"
-    t.text "object_changes", limit: 1073741823
+    t.text "object_changes"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
