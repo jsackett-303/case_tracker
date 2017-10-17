@@ -1,0 +1,8 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+/*
+ *= require jquery-ui/datepicker
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "clients";
+@import "scaffolds";

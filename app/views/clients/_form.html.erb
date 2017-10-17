@@ -1,3 +1,11 @@
+<script>
+  $( function() {
+    $( ".datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd",
+    });
+  } );
+</script>
+
 <%= form_with(model: client, local: true) do |form| %>
   <% if client.errors.any? %>
     <div id="error_explanation">
@@ -68,7 +76,7 @@
 
   <div class="field">
     <%= form.label :date_of_birth %>
-    <%= form.date_select :date_of_birth, id: :client_date_of_birth %>
+    <%= form.text_field :date_of_birth, id: :client_date_of_birth, class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -78,47 +86,47 @@
 
   <div class="field">
     <%= form.label :dlw %>
-    <%= form.date_select :dlw, id: :client_dlw %>
+    <%= form.text_field :dlw, id: :client_dlw, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :dli %>
-    <%= form.date_select :dli, id: :client_dli %>
+    <%= form.text_field :dli, id: :client_dli, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :first_contact %>
-    <%= form.date_select :first_contact, id: :client_first_contact %>
+    <%= form.text_field :first_contact, id: :client_first_contact, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :packet_sent %>
-    <%= form.date_select :packet_sent, id: :client_packet_sent %>
+    <%= form.text_field :packet_sent, id: :client_packet_sent, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :sign_up_date %>
-    <%= form.date_select :sign_up_date, id: :client_sign_up_date %>
+    <%= form.text_field :sign_up_date, id: :client_sign_up_date, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :initial_to_local %>
-    <%= form.date_select :initial_to_local, id: :client_initial_to_local %>
+    <%= form.text_field :initial_to_local, id: :client_initial_to_local, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :verfication_of_local %>
-    <%= form.date_select :verfication_of_local, id: :client_verfication_of_local %>
+    <%= form.text_field :verfication_of_local, id: :client_verfication_of_local, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :sixteen_ninety_six_to_oadr %>
-    <%= form.date_select :sixteen_ninety_six_to_oadr, id: :client_sixteen_ninety_six_to_oadr %>
+    <%= form.text_field :sixteen_ninety_six_to_oadr, id: :client_sixteen_ninety_six_to_oadr, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :verification_of_oadr %>
-    <%= form.date_select :verification_of_oadr, id: :client_verification_of_oadr %>
+    <%= form.text_field :verification_of_oadr, id: :client_verification_of_oadr, class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -133,82 +141,82 @@
 
   <div class="field">
     <%= form.label :initial_appearance %>
-    <%= form.date_select :initial_appearance, id: :client_initial_appearance %>
+    <%= form.text_field :initial_appearance, id: :client_initial_appearance, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :initial_denial %>
-    <%= form.date_select :initial_denial, id: :client_initial_denial %>
+    <%= form.text_field :initial_denial, id: :client_initial_denial, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :recon_filed %>
-    <%= form.date_select :recon_filed, id: :client_recon_filed %>
+    <%= form.text_field :recon_filed, id: :client_recon_filed, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :recon_denial %>
-    <%= form.date_select :recon_denial, id: :client_recon_denial %>
+    <%= form.text_field :recon_denial, id: :client_recon_denial, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :fr_requested %>
-    <%= form.date_select :fr_requested, id: :client_fr_requested %>
+    <%= form.text_field :fr_requested, id: :client_fr_requested, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :fr_sub %>
-    <%= form.date_select :fr_sub, id: :client_fr_sub %>
+    <%= form.text_field :fr_sub, id: :client_fr_sub, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :rfh_filed %>
-    <%= form.date_select :rfh_filed, id: :client_rfh_filed %>
+    <%= form.text_field :rfh_filed, id: :client_rfh_filed, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :rfh_acked %>
-    <%= form.date_select :rfh_acked, id: :client_rfh_acked %>
+    <%= form.text_field :rfh_acked, id: :client_rfh_acked, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :proposed_exhibits %>
-    <%= form.date_select :proposed_exhibits, id: :client_proposed_exhibits %>
+    <%= form.text_field :proposed_exhibits, id: :client_proposed_exhibits, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :ready_to_schedule %>
-    <%= form.date_select :ready_to_schedule, id: :client_ready_to_schedule %>
+    <%= form.text_field :ready_to_schedule, id: :client_ready_to_schedule, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :date_scheduled %>
-    <%= form.date_select :date_scheduled, id: :client_date_scheduled %>
+    <%= form.text_field :date_scheduled, id: :client_date_scheduled, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :claimant_hearing_prep %>
-    <%= form.date_select :claimant_hearing_prep, id: :client_claimant_hearing_prep %>
+    <%= form.text_field :claimant_hearing_prep, id: :client_claimant_hearing_prep, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :notice_of_hearing %>
-    <%= form.date_select :notice_of_hearing, id: :client_notice_of_hearing %>
+    <%= form.text_field :notice_of_hearing, id: :client_notice_of_hearing, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :hearing_date %>
-    <%= form.date_select :hearing_date, id: :client_hearing_date %>
+    <%= form.text_field :hearing_date, id: :client_hearing_date, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :supplemental_date %>
-    <%= form.date_select :supplemental_date, id: :client_supplemental_date %>
+    <%= form.text_field :supplemental_date, id: :client_supplemental_date, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :expedited %>
-    <%= form.date_select :expedited, id: :client_expedited %>
+    <%= form.text_field :expedited, id: :client_expedited, class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -218,7 +226,7 @@
 
   <div class="field">
     <%= form.label :decision_date %>
-    <%= form.date_select :decision_date, id: :client_decision_date %>
+    <%= form.text_field :decision_date, id: :client_decision_date, class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -238,7 +246,7 @@
 
   <div class="field">
     <%= form.label :ac %>
-    <%= form.date_select :ac, id: :client_ac %>
+    <%= form.text_field :ac, id: :client_ac, class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -258,7 +266,7 @@
 
   <div class="field">
     <%= form.label :close_out_letter %>
-    <%= form.date_select :close_out_letter, id: :client_close_out_letter %>
+    <%= form.text_field :close_out_letter, id: :client_close_out_letter, class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -278,17 +286,17 @@
 
   <div class="field">
     <%= form.label :date_costs_received %>
-    <%= form.date_select :date_costs_received, id: :client_date_costs_received %>
+    <%= form.text_field :date_costs_received, id: :client_date_costs_received, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :date_ssdi_received %>
-    <%= form.date_select :date_ssdi_received, id: :client_date_ssdi_received %>
+    <%= form.text_field :date_ssdi_received, id: :client_date_ssdi_received, class: 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :date_ssi_received %>
-    <%= form.date_select :date_ssi_received, id: :client_date_ssi_received %>
+    <%= form.text_field :date_ssi_received, id: :client_date_ssi_received, class: 'datepicker' %>
   </div>
 
   <div class="field">
