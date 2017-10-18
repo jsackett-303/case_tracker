@@ -8,3 +8,8 @@ table {
 table, th, td {
   border: 1px solid black;
 }
+
+th, tr, td {
+  padding: 4px;
+  white-space: nowrap;
+}
