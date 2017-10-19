@@ -1,0 +1,69 @@
+<script>
+$( function() {
+    $( ".datepicker" ).datepicker({
+        dateFormat: "yy-mm-dd",
+    });
+
+    $('.wysihtml5').each(function(i, elem) {
+        $(elem).wysihtml5();
+    });
+} );
+</script>
+
+<%= form_with(model: letter, local: true) do |form| %>
+  <% if letter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(letter.errors.count, "error") %> prohibited this letter from being saved:</h2>
+
+      <ul>
+      <% letter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :letter_content, class: 'wysihtml5', placeholder: 'Enter text ...' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_field :to, id: :letter_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.text_field :from, id: :letter_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cc %>
+    <%= form.text_field :cc, id: :letter_cc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bcc %>
+    <%= form.text_field :bcc, id: :letter_bcc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :template %>
+    <%= form.check_box :template, id: :letter_template %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.check_box :email, id: :letter_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sent %>
+    <%= form.text_field :sent, id: :letter_sent, class: 'datepicker' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

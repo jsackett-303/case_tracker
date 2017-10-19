@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :letters
   devise_for :users, skip: [:registrations]
   resources :users
   resources :clients do

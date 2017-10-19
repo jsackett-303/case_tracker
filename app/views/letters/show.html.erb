@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @letter.content %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @letter.to %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @letter.from %>
+</p>
+
+<p>
+  <strong>Cc:</strong>
+  <%= @letter.cc %>
+</p>
+
+<p>
+  <strong>Bcc:</strong>
+  <%= @letter.bcc %>
+</p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @letter.template %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @letter.email %>
+</p>
+
+<p>
+  <strong>Sent:</strong>
+  <%= @letter.sent %>
+</p>
+
+<%= link_to 'Edit', edit_letter_path(@letter) %> |
+<%= link_to 'Back', letters_path %>
+
+<p>
+  <h4>Letter History</h4>
+  <%= render 'clients/history', versions: @letter.versions %>
+</p>

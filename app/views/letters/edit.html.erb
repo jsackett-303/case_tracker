@@ -1,0 +1,11 @@
+<h1>Editing Letter</h1>
+
+<%= render 'form', letter: @letter %>
+
+<%= link_to 'Show', @letter %> |
+<%= link_to 'Back', letters_path %>
+
+<p>
+  <h4>Letter History</h4>
+  <%= render 'clients/history', versions: @letter.versions %>
+</p>
