@@ -17,7 +17,7 @@ class LettersMailer < ApplicationMailer
 
     content = substitute_tokens(letter.content)
     @client = client
-    @greeting = ERB.new(content).result(binding)
+    @greeting = ERB.new(content).result(binding).html_safe
 
     options = { to: client.email }
     options = options.merge({ from: letter.from }) if letter.from
