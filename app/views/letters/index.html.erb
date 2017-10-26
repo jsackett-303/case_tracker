@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>To</th>
       <th>From</th>
       <th>Cc</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @letters.each do |letter| %>
       <tr>
+        <td><%= letter.name %></td>
         <td><%= letter.to %></td>
         <td><%= letter.from %></td>
         <td><%= letter.cc %></td>

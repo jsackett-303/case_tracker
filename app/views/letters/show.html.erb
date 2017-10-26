@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @letter.name %>
+</p>
+
 <strong>Content:</strong>
 <hr>
   <%= @letter.content.html_safe %>

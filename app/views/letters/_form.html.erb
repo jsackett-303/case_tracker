@@ -24,6 +24,11 @@ $( function() {
   <% end %>
 
   <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :letter_name %>
+  </div>
+
+  <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content, id: :letter_content, class: 'froalaEditor', placeholder: 'Enter text ...' %>
   </div>

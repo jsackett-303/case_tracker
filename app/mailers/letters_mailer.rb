@@ -26,8 +26,13 @@ class LettersMailer < ApplicationMailer
     email = mail(options).deliver
 
     # save a copy
-    Letter.create!(content: @greeting, to: client.email, from: letter.from,
-                    template: false, sent: Time.now.utc, email: true)        if email
+    if email
+      Letter.create!(name: "#{letter.name}_#{client.id}",
+                     content: @greeting, client_id: client.id,
+                     to: client.email, from: letter.from,
+                     template: false, sent: Time.now.utc, email: true)
+    end
+
     email
   end
 

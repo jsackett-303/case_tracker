@@ -4,6 +4,8 @@ class Client < ApplicationRecord
   include SearchCop
   has_paper_trail
 
+  has_many :letters
+
   search_scope :search do
     attributes :last_name, :first_name, :email, :street, :city
   end

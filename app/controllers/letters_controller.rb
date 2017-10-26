@@ -71,6 +71,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:content, :to, :from, :cc, :bcc, :template, :email, :sent)
+      params.require(:letter).permit(:name, :content, :to, :from, :cc, :bcc, :template, :email, :sent)
     end
 end
