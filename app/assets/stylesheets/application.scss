@@ -4,7 +4,10 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 @import "clients";
 @import "letters";
 @import "scaffolds";
+@import "froala_editor.min";
+@import "froala_style.min";
+@import "font-awesome-sprockets";
+@import "font-awesome";

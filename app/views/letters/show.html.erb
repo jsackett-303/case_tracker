@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @letter.content %>
-</p>
+<strong>Content:</strong>
+<hr>
+  <%= @letter.content.html_safe %>
+<hr>
 
 <p>
   <strong>To:</strong>

@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Content</th>
       <th>To</th>
       <th>From</th>
       <th>Cc</th>
@@ -20,7 +19,6 @@
   <tbody>
     <% @letters.each do |letter| %>
       <tr>
-        <td><%= letter.content %></td>
         <td><%= letter.to %></td>
         <td><%= letter.from %></td>
         <td><%= letter.cc %></td>

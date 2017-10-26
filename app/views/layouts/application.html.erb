@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div id='navbar'><h3><%= render_navigation renderer: :links, join_with: ' &#124; ' %></h3></div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

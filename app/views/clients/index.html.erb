@@ -1,3 +1,8 @@
+<script>
+    function toggleDiv(divId) {
+        $("#"+divId).toggle();
+    }
+</script>
 <p id="notice"><%= notice %></p>
 
 <h4>Search Clients</h4>
@@ -148,7 +153,8 @@
 
 <%= link_to 'New Client', new_client_path %>
 
-<h4>Import Clients</h4>
+<h4><a href="javascript:toggleDiv('import_form');">Import Clients</a></h4>
+<div id='import_form' style='display: none'>
 <%= form_tag import_clients_path, method: :post, multipart: true do %>
   <p>
     Select a file to import
@@ -156,3 +162,4 @@
     <span><%= submit_tag "Import" %></span>
   </p>
 <% end %>
+</div>
