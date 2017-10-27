@@ -1,7 +1,7 @@
 class InitialAppearanceMailerJob < ApplicationJob
   queue_as :default
 
-  def self.perform(*args)
+  def self.perform
     letter = Letter.where(template: true, name: 'initial_appearance').first
     clients = Letter.where("name LIKE ?", 'initial_appearance%').where(template: false).pluck(:client_id)
 
