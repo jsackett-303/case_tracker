@@ -23,17 +23,14 @@ class LettersMailer < ApplicationMailer
     options = options.merge({ from: letter.from }) if letter.from
     options = options.merge({  bcc: letter.bcc }) if letter.bcc
     options = options.merge({   cc: letter.cc }) if letter.cc
-    email = mail(options).deliver
 
-    # save a copy
-    if email
+    Letter.transaction do
       Letter.create!(name: "#{letter.name}_#{client.id}",
                      content: @greeting, client_id: client.id,
                      to: client.email, from: letter.from,
                      template: false, sent: Time.now.utc, email: true)
+      mail options
     end
-
-    email
   end
 
   private
