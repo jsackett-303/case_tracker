@@ -1,0 +1,5 @@
+initial_appearance_mailer:
+  cron: "*/5 * * * *"
+  class: "InitialAppearanceMailerJob"
+  queue: default
+  description: "sends intial appearance emails"

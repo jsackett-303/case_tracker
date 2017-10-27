@@ -3,7 +3,8 @@
 
 require_relative 'config/application'
 require 'resque/tasks'
+require 'resque/scheduler/tasks'
 
 Rails.application.load_tasks
 task 'resque:setup' => :environment
-task 'jobs:work' => 'resque:work'
+task 'jobs:work' => ['resque:work', 'resque:scheduler']
