@@ -10,9 +10,9 @@ class LettersMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.letters_mailer.welcome.subject
+  #   en.letters_mailer.initial_appearance.subject
   #
-  def welcome(letter, client)
+  def initial_appearance(letter, client)
     raise "Letter must be a template" unless letter.template
 
     content = substitute_tokens(letter.content)

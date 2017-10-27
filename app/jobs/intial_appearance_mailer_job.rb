@@ -10,7 +10,7 @@ class IntialAppearanceMailerJob < ApplicationJob
 
       if Time.now > (client.initial_appearance - 30.days)
         Rails.logger.info "sending letter for client #{client.id}"
-        LettersMailer.welcome(letter, client).deliver
+        LettersMailer.initial_appearance(letter, client).deliver
       end
     end
   end
