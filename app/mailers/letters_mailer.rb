@@ -13,11 +13,12 @@ class LettersMailer < ApplicationMailer
   #   en.letters_mailer.initial_appearance.subject
   #
   def initial_appearance(letter, client)
-    raise "Letter must be a template" unless letter.template
+    raise "Letter must be a template" unless letter.try(:template)
+    raise "Client does not have an email address" unless client.try(:email)
 
     content = substitute_tokens(letter.content)
     @client = client
-    @greeting = ERB.new(content).result(binding).html_safe
+    @content = ERB.new(content).result(binding).html_safe
 
     options = { to: client.email }
     options = options.merge({ from: letter.from }) if letter.from
@@ -26,11 +27,13 @@ class LettersMailer < ApplicationMailer
 
     Letter.transaction do
       Letter.create!(name: "#{letter.name}_#{client.id}",
-                     content: @greeting, client_id: client.id,
+                     content: @content, client_id: client.id,
                      to: client.email, from: letter.from,
                      template: false, sent: Time.now.utc, email: true)
       mail options
     end
+  rescue
+    Rails.logger.error $!
   end
 
   private
