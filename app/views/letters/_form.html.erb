@@ -4,8 +4,7 @@ $( function() {
         dateFormat: "yy-mm-dd",
     });
 
-    $('.froalaEditor').each(function(i, elem) {
-        $(elem).froalaEditor();
+    $('.ckeditor').ckeditor({
     });
 } );
 </script>
@@ -30,7 +29,7 @@ $( function() {
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content, id: :letter_content, class: 'froalaEditor', placeholder: 'Enter text ...' %>
+    <%= form.text_area :content, id: :letter_content, class: 'ckeditor', placeholder: 'Enter text ...' %>
   </div>
 
   <div class="field">

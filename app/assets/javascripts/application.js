@@ -16,5 +16,5 @@
 //= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
 //= require bootstrap
-//= require froala_editor.min.js
+//= require ckeditor-jquery
 //= require_tree .
