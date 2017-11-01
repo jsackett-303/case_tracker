@@ -1,12 +1,5 @@
 class LettersMailer < ApplicationMailer
 
-  LETTER_TOKENS = {
-    'DATE_TODAY'                => '<%= Date.today %>',
-    'CLIENT_FIRST_NAME'         => '<%= @client.first_name %>',
-    'CLIENT_LAST_NAME'          => '<%= @client.last_name %>',
-    'CLIENT_INITIAL_APPEARANCE' => '<%= @client.initial_appearance %>',
-  }
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -39,7 +32,7 @@ class LettersMailer < ApplicationMailer
   private
 
   def substitute_tokens(content)
-    LETTER_TOKENS.each do |k,v|
+    LetterTokens.all.each do |k,v|
       content = content.gsub(k,v)
     end
     content
