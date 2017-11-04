@@ -7,5 +7,5 @@ Rails.application.load_tasks
 
 desc 'Job runner for sending emails'
 task :send_emails => :environment do
-  InitialAppearanceMailerJob.perform
+  MailerJob.perform
 end

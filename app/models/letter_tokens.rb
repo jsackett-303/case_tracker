@@ -1,73 +1,24 @@
 class LetterTokens
-  CLIENT_TOKENS = {
-    'CLIENT_AC' => '<%= @client.ac %>',
-    'CLIENT_ALJ' => '<%= @client.alj %>',
-    'CLIENT_APARTMENT' => '<%= @client.apartment %>',
-    'CLIENT_APPEAL' => '<%= @client.appeal %>',
-    'CLIENT_APPEAL_FILED' => '<%= @client.appeal_filed %>',
-    'CLIENT_AWARDED_AT' => '<%= @client.awarded_at %>',
-    'CLIENT_CASE_ID' => '<%= @client.case_id %>',
-    'CLIENT_CITY' => '<%= @client.city %>',
-    'CLIENT_CLAIMANT_HEARING_PREP' => '<%= @client.claimant_hearing_prep %>',
-    'CLIENT_CLOSE_OUT_LETTER' => '<%= @client.close_out_letter %>',
-    'CLIENT_COST_THREE' => '<%= @client.cost_three %>',
-    'CLIENT_COST_TWO' => '<%= @client.cost_two %>',
-    'CLIENT_COSTS' => '<%= @client.costs %>',
-    'CLIENT_CREATED_AT' => '<%= @client.created_at %>',
-    'CLIENT_DATE_COSTS_RECEIVED' => '<%= @client.date_costs_received %>',
-    'CLIENT_DATE_OF_BIRTH' => '<%= @client.date_of_birth %>',
-    'CLIENT_DATE_SCHEDULED' => '<%= @client.date_scheduled %>',
-    'CLIENT_DATE_SSDI_RECEIVED' => '<%= @client.date_ssdi_received %>',
-    'CLIENT_DATE_SSI_RECEIVED' => '<%= @client.date_ssi_received %>',
-    'CLIENT_DECISION' => '<%= @client.decision %>',
-    'CLIENT_DECISION_DATE' => '<%= @client.decision_date %>',
-    'CLIENT_DLI' => '<%= @client.dli %>',
-    'CLIENT_DLW' => '<%= @client.dlw %>',
-    'CLIENT_EMAIL' => '<%= @client.email %>',
-    'CLIENT_EXPEDITED' => '<%= @client.expedited %>',
-    'CLIENT_FIRST_CONTACT' => '<%= @client.first_contact %>',
-    'CLIENT_FIRST_NAME' => '<%= @client.first_name %>',
-    'CLIENT_FR_REQUESTED' => '<%= @client.fr_requested %>',
-    'CLIENT_FR_SUB' => '<%= @client.fr_sub %>',
-    'CLIENT_HEARING_DATE' => '<%= @client.hearing_date %>',
-    'CLIENT_ID' => '<%= @client.id %>',
+  OVERRIDES = {
     'CLIENT_INITIAL_APPEARANCE' => '<%= @client.initial_appearance.to_s(:long) %>',
-    'CLIENT_INITIAL_DENIAL' => '<%= @client.initial_denial %>',
-    'CLIENT_INITIAL_TO_LOCAL' => '<%= @client.initial_to_local %>',
-    'CLIENT_LAST_NAME' => '<%= @client.last_name %>',
-    'CLIENT_LOCAL' => '<%= @client.local %>',
-    'CLIENT_LOCAL_TYPE' => '<%= @client.local_type %>',
-    'CLIENT_ME' => '<%= @client.me %>',
-    'CLIENT_NOTICE_OF_HEARING' => '<%= @client.notice_of_hearing %>',
-    'CLIENT_OADR' => '<%= @client.oadr %>',
-    'CLIENT_OPEN' => '<%= @client.open %>',
-    'CLIENT_PACKET_SENT' => '<%= @client.packet_sent %>',
-    'CLIENT_PHONE1' => '<%= @client.phone1 %>',
-    'CLIENT_PHONE2' => '<%= @client.phone2 %>',
-    'CLIENT_PREFIX' => '<%= @client.prefix %>',
-    'CLIENT_PROPOSED_EXHIBITS' => '<%= @client.proposed_exhibits %>',
-    'CLIENT_READY_TO_SCHEDULE' => '<%= @client.ready_to_schedule %>',
-    'CLIENT_RECON_DENIAL' => '<%= @client.recon_denial %>',
-    'CLIENT_RECON_FILED' => '<%= @client.recon_filed %>',
-    'CLIENT_RFH_ACKED' => '<%= @client.rfh_acked %>',
-    'CLIENT_RFH_FILED' => '<%= @client.rfh_filed %>',
-    'CLIENT_SIGN_UP_DATE' => '<%= @client.sign_up_date %>',
-    'CLIENT_SIXTEEN_NINETY_SIX_TO_OADR' => '<%= @client.sixteen_ninety_six_to_oadr %>',
-    'CLIENT_STATE' => '<%= @client.state %>',
-    'CLIENT_STREET' => '<%= @client.street %>',
-    'CLIENT_SUPPLEMENTAL_DATE' => '<%= @client.supplemental_date %>',
-    'CLIENT_UPDATED_AT' => '<%= @client.updated_at %>',
-    'CLIENT_VE' => '<%= @client.ve %>',
-    'CLIENT_VERFICATION_OF_LOCAL' => '<%= @client.verfication_of_local %>',
-    'CLIENT_VERIFICATION_OF_OADR' => '<%= @client.verification_of_oadr %>',
-    'CLIENT_ZIP_CODE' => '<%= @client.zip_code %>'
   }
 
   UTIL_TOKENS = {
     'DATE_TODAY' => '<%= Date.today.to_s(:long) %>'
   }
 
+  def self.client_map
+    Client.new.attributes.keys.sort.inject({}) do |hash,k|
+     hash["CLIENT_#{k.upcase}"] = "<%= @client.#{k} %>"
+     hash
+    end
+  end
+
+  def self.client_tokens
+    client_map.merge(OVERRIDES)
+  end
+
   def self.all
-    UTIL_TOKENS.merge(CLIENT_TOKENS)
+    UTIL_TOKENS.merge(client_tokens)
   end
 end
